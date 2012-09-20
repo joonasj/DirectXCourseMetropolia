@@ -2,11 +2,11 @@
 
 #include <Windows.h>
 
-LRESULT CALLBACK WndProc( HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
+LRESULT CALLBACK WndProc( HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam);
 
 //hInstance = nykynen instanssi, prevInstance = edellinen instanssi
 //w = wide unicode characters
-int WINAPI xWinMain( HINSTANCE hInstance, HINSTANCE prevInstance, LPWSTR cmdLine, int cmdShow) {
+int WINAPI wWinMain( HINSTANCE hInstance, HINSTANCE prevInstance, LPWSTR cmdLine, int cmdShow) {
 
 	//K‰‰nt‰j‰ ei huomio seuraavia parametrej‰
 	UNREFERENCED_PARAMETER( prevInstance);
@@ -75,4 +75,6 @@ LRESULT CALLBACK WndProc( HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 		default:
 			return DefWindowProc(hwnd, message, wParam, lParam);
 	}
+
+	return 0;
 }
